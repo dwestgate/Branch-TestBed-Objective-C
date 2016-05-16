@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Branch.h"
 
-@interface LogOutputViewController : UIViewController
+@interface LogOutputViewController : UIViewController <BranchDeepLinkingController>
 
 @property (nonatomic, strong) NSString *logOutput;
 

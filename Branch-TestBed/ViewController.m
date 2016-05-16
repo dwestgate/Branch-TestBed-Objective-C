@@ -55,8 +55,8 @@ NSDictionary *metadata;
     _branchUniversalObject.title = title;
     _branchUniversalObject.contentDescription = contentDescription;
     _branchUniversalObject.imageUrl = imageUrl;
-    [_branchUniversalObject addMetadataKey:@"Metadata_Key1" value:@"Metadata_value1"];
-    [_branchUniversalObject addMetadataKey:@"Metadata_Key2" value:@"Metadata_value2"];
+    [_branchUniversalObject addMetadataKey:@"deepview_text" value:[NSString stringWithFormat:
+            @"This text was embedded as data in a Branch link with the following characteristics:\n\n  canonicalUrl: %@\n  title: %@\n  contentDescription: %@\n  imageUrl: %@\n", canonicalUrl, title, contentDescription, imageUrl]];
     [self refreshRewardPoints];
     
 }

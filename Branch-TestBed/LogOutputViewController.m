@@ -16,14 +16,26 @@
 
 @implementation LogOutputViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _logOutputTextView.text = _logOutput;
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+@synthesize deepLinkingCompletionDelegate;
+- (void)configureControlWithData:(NSDictionary *)data {
+    NSString *message = data[@"deepview_text"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        _logOutputTextView.text = message;
+    });
+
 }
 
 /*
